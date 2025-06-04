@@ -17,6 +17,7 @@
 import { useState } from "react";
 import type { Route } from "./+types/home";
 import TapeMeasureCheatSheetModal from "~/modals/tape-measure-cheat-sheet";
+import PilotHoleCheatSheetModal from "~/modals/pilot-hole-cheat-sheet";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -29,6 +30,10 @@ const routes = [
   {
     label: "1/16th Tape Measure Cheat Sheet",
     renderModal: (isOpen: boolean, onClose: () => void) => <TapeMeasureCheatSheetModal isOpen={isOpen} onClose={onClose} />,
+  },
+  {
+    label: "Pilot Hole Cheat Sheet",
+    renderModal: (isOpen: boolean, onClose: () => void) => <PilotHoleCheatSheetModal isOpen={isOpen} onClose={onClose} />,
   },
 ];
 
