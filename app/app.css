@@ -2,14 +2,24 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
 html,
 body {
   @apply bg-white dark:bg-gray-950;
-
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+body {
+  background-image: url("/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; /* Center the background image */
+  background-attachment: fixed;
+  min-height: 100vh; /* Ensure body takes full viewport height */
+  min-width: 100vw; /* Ensure body takes full viewport width */
 }
